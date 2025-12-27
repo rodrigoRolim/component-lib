@@ -1,0 +1,31 @@
+name: CI
+
+# define triggers
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+# define jobs (name_job, runs-on, steps{uses{with}, name[command name]{run: command}})
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+      
+      - name: Install Deps
+        run: npm ci
+      
+      - name: Lint
+        run: npm run lint
+      
+      - name: Unit Tests
+        run: npm run test:unit:ci
+      
+      - name: Build check
+        run: npm run build-storybook
