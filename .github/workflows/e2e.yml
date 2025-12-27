@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Install Playwright browsers
-        run: npx playwright install --width-deps
+        run: npx playwright install --with-deps
 
       # se você precisar servir a aplicação
       # - name: Start app
