@@ -6,7 +6,12 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 type StoryProps = ComponentProps<typeof Button>
 
 const meta: Meta<StoryProps> = {
+  title: 'Components/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+    chromatic: { disableSnapshot: false }
+  },
   argTypes: {
     variant: {
       options: ['primary', 'secondary'],
