@@ -16,6 +16,6 @@ export default function Button({ variant = 'primary', children, onClick }: Butto
     }
   }
   return (
-    <button style={{...variantStyles[variant], color: 'white'}} onClick={onClick}>{children}</button>
+    <button style={{...variantStyles[variant], color: 'white', border: 0}} onClick={onClick}>{children}</button>
   )
 }

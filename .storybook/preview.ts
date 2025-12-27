@@ -15,10 +15,11 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo'
     },
-    
+
     docs: {
       disable: true
-    }
+    },
+    viewMode: 'story'
   },
 };
 

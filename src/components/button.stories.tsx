@@ -30,6 +30,11 @@ export default meta
 type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
+  parameters: {
+    viewMode: 'story',
+    chromatic: { disableSnapshot: false },
+    docs: { disable: true }
+  },
   args: {
     variant: 'primary',
     children: 'Text'
