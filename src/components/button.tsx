@@ -12,7 +12,7 @@ export default function Button({ variant = 'primary', children, onClick }: Butto
       backgroundColor: 'blue'
     },
     secondary: {
-      backgroundColor: 'gray'
+      backgroundColor: 'darkgray'
     }
   }
   return (
